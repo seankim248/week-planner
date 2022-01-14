@@ -120,6 +120,6 @@ tr:nth-child(2n + 1) {
   background-color: lightgray;
 }
 
-thead {
-  background-color: rgb(32, 31, 31);
+.header-border {
+  background-color: rgb(128, 127, 127);
 }
