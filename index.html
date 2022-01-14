@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,22 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <div class="container">
     <div class="row">
       <div class="column-full">
         <h1>Weekly Planner</h1>
       </div>
+    </div>
+    <div class="row space-between weekdays-box">
+      <div class="entry-day">Sunday</div>
+      <div class="entry-day">Monday</div>
+      <div class="entry-day">Tuesday</div>
+      <div class="entry-day">Wednesday</div>
+      <div class="entry-day">Thursday</div>
+      <div class="entry-day">Friday</div>
+      <div class="entry-day">Saturday</div>
     </div>
     <div class="row">
       <div class="column-full">
@@ -21,64 +32,114 @@
         </div>
       </div>
     </div>
-    <div class="overlay hidden">
-      <div class="modal-container modal-container-border">
-        <div class="modal-content">
-          <h2>Add Entry</h2>
-          <form>
-            <div class="row">
-              <div class="column-full">
-                <select class="day-of-week">
-                  <option>Day of Week</option>
-                  <option>Sunday</option>
-                  <option>Monday</option>
-                  <option>Tuesday</option>
-                  <option>Wednesday</option>
-                  <option>Thursday</option>
-                  <option>Friday</option>
-                  <option>Saturday</option>
-                </select>
-                <select class="select-margin-left time">
-                  <option>Time</option>
-                  <option>0:00</option>
-                  <option>01:00</option>
-                  <option>02:00</option>
-                  <option>03:00</option>
-                  <option>04:00</option>
-                  <option>05:00</option>
-                  <option>06:00</option>
-                  <option>07:00</option>
-                  <option>08:00</option>
-                  <option>09:00</option>
-                  <option>10:00</option>
-                  <option>11:00</option>
-                  <option>12:00</option>
-                  <option>13:00</option>
-                  <option>14:00</option>
-                  <option>15:00</option>
-                  <option>16:00</option>
-                  <option>17:00</option>
-                  <option>18:00</option>
-                  <option>19:00</option>
-                  <option>20:00</option>
-                  <option>21:00</option>
-                  <option>22:00</option>
-                  <option>23:00</option>
-                  <option>24:00</option>
-                </select>
-              </div>
+    <div class="row">
+      <h1> Scheduled Events for <span class="scheduled-day">Monday</span>
+      </h1>
+    </div>
+    <div class="row">
+      <table>
+        <thead>
+          <tr>
+            <td class="header-border">Time</td>
+            <td class="header-border"> Description</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="overlay hidden">
+    <div class="modal-container modal-container-border">
+      <div class="modal-content">
+        <h2>Add Entry</h2>
+        <form>
+          <div class="row">
+            <div class="column-full">
+              <select class="day-of-week">
+                <option>Day of Week</option>
+                <option>Sunday</option>
+                <option>Monday</option>
+                <option>Tuesday</option>
+                <option>Wednesday</option>
+                <option>Thursday</option>
+                <option>Friday</option>
+                <option>Saturday</option>
+              </select>
+              <select class="select-margin-left time">
+                <option>Time</option>
+                <option>0:00</option>
+                <option>01:00</option>
+                <option>02:00</option>
+                <option>03:00</option>
+                <option>04:00</option>
+                <option>05:00</option>
+                <option>06:00</option>
+                <option>07:00</option>
+                <option>08:00</option>
+                <option>09:00</option>
+                <option>10:00</option>
+                <option>11:00</option>
+                <option>12:00</option>
+                <option>13:00</option>
+                <option>14:00</option>
+                <option>15:00</option>
+                <option>16:00</option>
+                <option>17:00</option>
+                <option>18:00</option>
+                <option>19:00</option>
+                <option>20:00</option>
+                <option>21:00</option>
+                <option>22:00</option>
+                <option>23:00</option>
+                <option>24:00</option>
+              </select>
             </div>
-            <div class="row">
-              <textarea placeholder="Description" rows="5"></textarea>
-            </div>
-            <div class="submit-button">
-              <button class="submit-button-styling">Submit</button>
-            </div>
-          </form>
-        </div>
+          </div>
+          <div class="row">
+            <textarea placeholder="Description" rows="5"></textarea>
+          </div>
+          <div class="submit-button">
+            <button class="submit-button-styling">Submit</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
+  </div>
   <script src="main.js"></script>
 </body>
+
 </html>
