@@ -1,0 +1,92 @@
+.container {
+  margin: auto 0;
+}
+
+h1 {
+  font-family: Dongle, sans-serif;
+  text-align: center;
+  font-size: 50px;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  width: 100%;
+}
+
+.button {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.add-entry-button {
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: rgb(37, 17, 83);
+  background-color: aquamarine;
+  border: 1px solid;
+  cursor: pointer;
+}
+
+.submit-button-styling {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: rgb(37, 17, 83);
+  background-color: aquamarine;
+  border: 1px solid;
+  cursor: pointer;
+}
+
+.modal-container {
+  width: 500px;
+  background-color: white;
+}
+
+.modal-container-border {
+  border-radius: 5px;
+}
+
+.modal-content {
+  padding: 0 25px;
+  height: 250px;
+}
+
+textarea {
+  width: 100%;
+  margin-top: 25px;
+  padding-left: 8px;
+}
+
+h2 {
+  font-family: Dongle, sans-serif;
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 0;
+}
+
+.submit-button {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.select-margin-left {
+  margin-left: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+}
