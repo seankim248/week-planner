@@ -1,11 +1,19 @@
+var data = {
+  day: 'Monday'
+};
+
 var $addEntryButton = document.querySelector('.add-entry-button');
 $addEntryButton.addEventListener('click', showEntryFunction);
 
 function showEntryFunction(event) {
-  var $overlay = document.querySelector('.overlay');
+  var $overlay = document.querySelector('#add-entry');
   $overlay.classList.replace('hidden', 'display');
 }
 
+function updateEntryFunction(event) {
+  var $overlay = document.querySelector('#update-entry');
+  $overlay.classList.replace('hidden', 'display');
+}
 var $form = document.querySelector('form');
 $form.addEventListener('submit', submitFunction);
 
@@ -71,6 +79,13 @@ function renderEntries(arr) {
   var $tdList = document.querySelectorAll('tbody td');
   for (var i = 0; i < $tdList.length; i++) {
     $tdList[i].textContent = arr[i];
+    if (i % 2 !== 0 && $tdList[i].textContent) {
+      var $updateButton = document.createElement('button');
+      $updateButton.className = 'update-btn';
+      $updateButton.textContent = 'Update';
+      $tdList[i].appendChild($updateButton);
+    }
+
   }
 }
 
@@ -81,4 +96,20 @@ $weekdaysBox.addEventListener('click', function (e) {
   renderEntries(getEntries(e.target.textContent));
   var $span = document.querySelector('span');
   $span.textContent = e.target.textContent;
+});
+
+var $table = document.querySelector('table');
+$table.addEventListener('click', function (event) {
+  if (event.target.tagName === 'BUTTON') {
+    updateEntryFunction();
+    var $updateButton = document.querySelector('.update-btn');
+    var $updateDescription = $updateButton.closest('tr').querySelector('td:nth-child(2)').textContent;
+    var $updateTime = $updateButton.closest('tr').querySelector('td:nth-child(1)').textContent;
+    var $updateDayOfWeek = document.querySelector('#update-entry').querySelector('.day-of-week');
+    var $timeInput = document.querySelector('#update-entry').querySelector('.time');
+    var $descriptionInput = document.querySelector('#update-entry').querySelector('textarea');
+    $updateDayOfWeek.value = data.day;
+    $timeInput.value = $updateTime;
+    $descriptionInput.value = $updateDescription;
+  }
 });

@@ -132,3 +132,23 @@ tr:nth-child(2n + 1) {
 .justify-center {
   justify-content: center;
 }
+
+.update-btn {
+  border: 1px solid black;
+  margin-right: 20px;
+  background-color: #2b78e4;
+  color: white;
+  border-radius: 5px;
+}
+
+.update-btn:hover {
+  cursor: pointer;
+}
+
+.no-border-left {
+  border-left: none;
+}
+
+.no-border-right {
+  border-right: none;
+}
